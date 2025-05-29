@@ -4,7 +4,7 @@ import { apiClient } from "@/api/client/csr";
 import { Article } from "@/types";
 import { useEffect, useState, useCallback } from "react";
 
-export function useArticles() {
+function useArticles() {
   const [articles, setArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
